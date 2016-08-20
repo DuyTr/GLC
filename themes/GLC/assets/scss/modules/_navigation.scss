@@ -51,22 +51,24 @@
         background-color: $light-gray;
         margin-top: $contentGap;
         position: relative;
+        height: 40px;
         .menu{
             display: inline-block;
             margin: 0;
             list-style-type: none;
             margin: 0;
-            height: 40px;
-            line-height: 40px;
             &>li{
                 display: inline-block;
                 text-transform: capitalize;
                 font-family: $headerFontFamily;
                 font-size: 18px;
+                float: left;
                 &>a{
                     color: $black;
-                    padding: 11px $contentGap;
+                    padding: 0 $contentGap;
                     vertical-align: center;
+                    line-height: 40px;
+                    display: inline-block;
                 }
                 &:hover{
                     background-color: $orange;
