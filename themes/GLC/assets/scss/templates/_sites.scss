@@ -3,6 +3,8 @@ body{
 	-webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
     overflow: auto;
+    color: $light-black;
+
 }
 .panel{
 	padding: $sectionSpacing 0;
@@ -12,7 +14,7 @@ h1, h2 ,h3{
 }
 h1{
 	font-weight: $fontWeightBold;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 p{
 	margin-bottom: $contentGap;
@@ -26,19 +28,112 @@ p{
 }
 .center-container{
   display: table;
+  table-layout: fixed;
   width: 100%;
   height: 100%;
 }
 .center-content {
   display: table-cell;
-  text-align: right;
+  text-align: center!important;
   vertical-align: middle;
+}
+.btn{
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: $white;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: $fontWeightBold;
+	transition: all 0.5s ease;
+	color: $dark-orange;
+	border: 1px solid $dark-orange;
+	&:hover{
+		color: $white;
+		background-color: $dark-orange;
+		border-color: $dark-orange;
+	}
+}
+.btn.btn-blue{
+	border: none;
+	background-color: $light-blue;
+	color: $white;
+	&:hover{
+		color: $light-blue;
+		background-color: $white;
+	}
+}
+.btn.btn-orange{
+	border: none;
+	background-color: $light-orange;
+	color: $white;
+	&:hover{
+		color: $light-orange;
+		background-color: $white;
+	}
+}
+.section-title{
+	text-align: center;
+	position: relative;
+	text-transform: capitalize;
+	&:after{
+		content:'';
+	    position:absolute;
+	    width:100px;
+	    height:1px;
+	    background: $gray;
+	    bottom:-10px;
+	    left:0;
+	    right:0;
+	    margin:auto;
+	}
+}
+.image-container{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	.overlay{
+		width: 100%;
+		height: 100%;
+	}
+}
+.no-padding-medium-up{
+	@include breakpoint (medium up){
+		padding: 0!important;
+	}
+}
+.gradient{
+	&.ltr{
+		background: linear-gradient(270deg, #ee5a24, #ffffff, #003462);
+	}
+	&.rtl{
+		background: linear-gradient(270deg, #003462, #ffffff, #ee5a24);
+	}
+	background-size: 600% 600%;
+	height: 3px;
+	
+	animation: animated-gradient 18s ease infinite;
+
+	@-webkit-keyframes animated-gradient {
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
+	}
+	@-moz-keyframes animated-gradient {
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
+	}
+	@keyframes animated-gradient { 
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
+	}
 }
 // *1 Home Page
 
 // Slider
 .homepage-slider{
-	margin-bottom: 10px;
 	.slider-content{
 		height: 500px;
 		background-size: cover;
@@ -46,36 +141,155 @@ p{
 
 	}
 }
-//Greetings
-.principal{
-	text-align: center;
-	display:inline-block;
-	margin: 0 $contentGap;
-	img{
-		display: block;
-		margin: 0 auto 10px;
-		max-width: 170px;
-		border-radius: 50%;
-		border: 5px solid $orange;
+
+.about{
+	h1{
+		a{
+			transition: all 0.5s ease;
+			color: $dark-blue;
+		}
+		span{
+			transition: all 0.5s ease;
+			color: $dark-orange;
+		}
+		&:hover{
+			a{
+				color: $dark-orange;
+			}
+			span{
+				color: $dark-blue;
+			}
+		}
 	}
-	.name{
-		font-size: 18px;
-		font-family: $headerFontFamily;
-		font-style: italic;
-		margin-bottom: 0;
+	.headline{
+		font-size: 25px;
+		color: $dark-orange;
+		line-height: 1.0;
+	}
+	.value{
+		.image-container{
+			height: 200px;
+			border: 3px solid $dark-gray;
+			margin-bottom: $contentGap;
+			.overlay{
+				transition: all 0.5s ease;
+				background-color: rgba(0,0,0,0.6);
+			}
+			h2{
+				@include absolute-center;
+				transition: all 0.5s ease;
+				color: $white;
+				font-weight: $fontWeightBold;
+				margin-bottom: 0;
+				text-transform: uppercase;
+			}
+		}
+		.text-container	{
+			padding: 0 20px;
+			p{
+				margin-bottom: 10px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+		&:hover{
+			.overlay{
+				background-color: rgba(255,255,255,0.6);
+			}
+			h2{
+				color: $dark-blue;
+			}
+		}
 	}
 }
-.greetings{
-	.btn{
-		display: inline-block;
-		padding: 10px 20px;
-		background-color: $light-gray;
-		font-size: 18px;
-		text-transform: uppercase;
-		font-weight: $fontWeightBold;
-		color: $black;
+
+// Latest
+.latest{
+	padding-bottom: 0;
+	background-color: $light-gray;
+	h1{
+		color: $dark-blue;
 	}
+	span{
+		color: $dark-orange;
+	}
+	.image-container{
+		height: 300px;
+		overflow: hidden;
+		.overlay{
+			background-color: rgba(0,0,0,0.5);
+			position: relative;
+			transition: all .25s ease;
+			h2{
+				@include absolute-center;
+				transition: all 0.5s ease;
+				font-weight: $fontWeightBold;
+				margin-bottom: 0;
+				text-transform: uppercase;
+				a{
+					color: $white;
+				}
+			}
+		}
+		&:hover{
+			.overlay{
+				opacity: 0;
+			}
+			.info-box{
+				top: 0;
+			}
+		}
+	}
+	.info-box-container{
+		bottom: 0;
+	    position: absolute;
+	    width: 100%;
+	    z-index: 3;
+	    height: 220px;
+	    .info-box{
+	    	z-index: 3;
+		    transition: all .25s ease;
+		    position: relative;
+		    top: 220px;
+		    height: 220px; 
+		    padding: 20px 20px 0;
+		    color: $white;
+		    text-align: center;
+		    &.blue{
+				background-color: rgba(0,51,98,0.9);
+		    }
+		    &.orange{
+		    	background-color: rgba(238,90,36,0.9);
+		    }
+	    }
+	    h2{
+	    	font-weight: $fontWeightBold;
+			text-transform: uppercase;
+			margin-bottom: 30px;
+			position: relative;
+			&:after{
+				content:'';
+			    position:absolute;
+			    width:200px;
+			    height:1px;
+			    background: $white;
+			    bottom:-15px;
+			    left:0;
+			    right:0;
+			    margin:auto;
+			}
+	    }
+	    .btn-container{
+	    	position: absolute;
+	    	bottom: 0;
+	    	left: 0;
+	    	right: 0;
+	    }
+	}
+
 }
+
 
 // SSAP
 .ssap{
@@ -162,20 +376,3 @@ p{
 	}	
 }
 // Model
-.value{
-	background-color: $light-gray;
-	.model{
-		padding: 0 20px;
-		img{
-			display: block;
-			margin: 0 auto $contentGap;
-			height: 90px;
-		}
-		p{
-			margin-bottom: 10px;
-			&:last-child{
-				margin-bottom: 0;
-			}
-		}
-	}
-}

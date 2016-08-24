@@ -40,11 +40,6 @@
 				<div class="small-10 mediun-8 large-6 columns">
 					<div class="logo-wrapper" data-equalizer-watch>
 						<div class="logo" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/glc-logo.png')"></div>
-						<h2 class="logo-headline">
-							Empowering <br> 
-							future leaders <br>
-							to reach their goals
-						</h2>
 					</div>
 				</div>
 				<div class="small-2 medium-4 large-6 columns">
@@ -58,18 +53,20 @@
 							</p>
 						</div>
 					</div>
-				</div>
+				</div> 
 				<div class="small-12 columns">
 					<div class="menu-bottom">
-						<ul class="menu">
+						<!-- <ul class="menu">
 							<li class="active" ><a href="">Home</a></li>
 							<li><a href="">about us</a></li>
-							<li><a href="">What is SSAP?</a></li>
+							<li><a href="">program</a></li>
+							<li><a href="">admission</a></li>
 							<li><a href="">Gallery</a></li>
 							<li><a href="">Community</a></li>
 							<li><a href="">My Page</a></li>
 							<li><a href="">Contact us</a></li>
-						</ul>
+						</ul> -->
+						<?php wp_nav_menu('primary'); ?>
 					</div>
 				</div>
 			</div>
