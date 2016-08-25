@@ -1,13 +1,29 @@
+/*
+================
+/* *General
+/* *Home Page
+
+
+*/
+
+
+/* *General */
 body{
 	background: url('../placeholder_images/bg-pattern.png');
 	-webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
     overflow: auto;
     color: $light-black;
-
+	@include breakpoint (small only) {
+		font-size: 14px;
+		line-height: 1.7
+	}
 }
 .panel{
 	padding: $sectionSpacing 0;
+	@include breakpoint (small only) {
+		padding: $sectionSpacingSmall 0;
+	}
 }
 h1, h2 ,h3{
 	font-family: $headerFontFamily;
@@ -47,6 +63,9 @@ p{
 	transition: all 0.5s ease;
 	color: $dark-orange;
 	border: 1px solid $dark-orange;
+	@include breakpoint (small only) {
+		font-size: 16px;
+	}
 	&:hover{
 		color: $white;
 		background-color: $dark-orange;
@@ -103,16 +122,12 @@ p{
 	}
 }
 .gradient{
-	&.ltr{
-		background: linear-gradient(270deg, #ee5a24, #ffffff, #003462);
-	}
-	&.rtl{
-		background: linear-gradient(270deg, #003462, #ffffff, #ee5a24);
-	}
-	background-size: 600% 600%;
 	height: 3px;
-	
-	animation: animated-gradient 18s ease infinite;
+
+	-webkit-animation: animated-gradient 12s ease infinite;
+	-moz-animation: animated-gradient 12s ease infinite;
+	-o-animation: animated-gradient 12s ease infinite;
+	animation: animated-gradient 12s ease infinite;
 
 	@-webkit-keyframes animated-gradient {
 	    0%{background-position:0% 50%}
@@ -124,25 +139,102 @@ p{
 	    50%{background-position:100% 50%}
 	    100%{background-position:0% 50%}
 	}
+	@-o-keyframes animated-gradient {
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
+	}
 	@keyframes animated-gradient { 
 	    0%{background-position:0% 50%}
 	    50%{background-position:100% 50%}
 	    100%{background-position:0% 50%}
 	}
+	&.ltr{
+		background: linear-gradient(270deg, #ee5a24, #ffffff, #003462);
+		background-size: 600%;
+	}
+	&.rtl{
+		background: linear-gradient(270deg, #003462, #ffffff, #ee5a24);
+		background-size: 600%;
+	}
 }
-// *1 Home Page
-
+.headline{
+	font-size: 25px;
+	color: $dark-orange;
+	line-height: 1.0;
+	@include breakpoint (small only) {
+		font-size: 18px;
+	}
+	@include breakpoint (small only) {
+		font-size: 20px;
+	}
+}
+/* *Home Page */
 // Slider
 .homepage-slider{
+	.slider-row{
+		max-width: none!important;
+	}
 	.slider-content{
-		height: 500px;
-		background-size: cover;
-		background-repeat: no-repeat;
-
+		height: 400px;
+		.school{
+			height: 400px;
+		}
+	}
+	.personal-quote-container{
+		height: 400px;
+		position: relative;
+	}
+	.personal-quote{
+		@include vertical-center;
+		padding: 0 $sectionSpacing;
+		.portrait{
+			display: block;
+		    width: 150px;
+		    border-radius: 50%;
+		    margin-left: 30px;
+		    border: 3px solid $dark-gray;
+		}
+		p{
+			padding-left: 30px;
+			margin-bottom: 0;
+		}
+		.quote{
+			font-family: $headerFontFamily;
+			font-style: italic;
+			color: $dark-gray;
+			margin: 20px 0;
+			position: relative;
+			&:before{
+				font-family: FontAwesome;
+				content: '\f10d';
+				color: $dark-orange;
+				font-size: 18px;
+				position: absolute;
+				left: 0; top: 0;
+			}		
+		}
+		.name{
+			color: $dark-orange;
+			font-family: $headerFontFamily;
+			font-weight: $fontWeightBold;
+			text-transform: capitalize;
+		}
+		.titles{
+			color: $dark-blue;
+			font-weight: $fontWeightBold;
+			font-size: 14px;
+			@include breakpoint (small only) {
+				font-size: 12px;
+			}
+		}
 	}
 }
 
 .about{
+	@include breakpoint (medium-sm down) {
+		margin-bottom: 15px;
+	}
 	h1{
 		a{
 			transition: all 0.5s ease;
@@ -161,16 +253,17 @@ p{
 			}
 		}
 	}
-	.headline{
-		font-size: 25px;
-		color: $dark-orange;
-		line-height: 1.0;
-	}
 	.value{
+		@include breakpoint (medium-sm down) {
+			margin-bottom: $contentGapSmall;
+		}
 		.image-container{
-			height: 200px;
+			height: 100px;
 			border: 3px solid $dark-gray;
 			margin-bottom: $contentGap;
+			@include breakpoint (medium-sm) {
+				height: 200px;
+			}
 			.overlay{
 				transition: all 0.5s ease;
 				background-color: rgba(0,0,0,0.6);
@@ -182,10 +275,14 @@ p{
 				font-weight: $fontWeightBold;
 				margin-bottom: 0;
 				text-transform: uppercase;
+				text-align: center;
 			}
 		}
 		.text-container	{
 			padding: 0 20px;
+			@include breakpoint (medium only) {
+				padding: 0 5px;
+			}
 			p{
 				margin-bottom: 10px;
 				&:last-child{
@@ -214,9 +311,15 @@ p{
 	span{
 		color: $dark-orange;
 	}
-	.image-container{
-		height: 300px;
+	.image-container-wrapper{
 		overflow: hidden;
+		position: relative;
+		.image-container{
+			height: 200px;
+		    @include breakpoint (large) {
+		    	height: 300px
+		    }
+		}
 		.overlay{
 			background-color: rgba(0,0,0,0.5);
 			position: relative;
@@ -246,16 +349,23 @@ p{
 	    position: absolute;
 	    width: 100%;
 	    z-index: 3;
-	    height: 220px;
+	    height: 200px;
+	    @include breakpoint (large) {
+	    	height: 2200px
+	    }
 	    .info-box{
 	    	z-index: 3;
 		    transition: all .25s ease;
 		    position: relative;
-		    top: 220px;
-		    height: 220px; 
+		    top: 200px;
+		    height: 200px; 
 		    padding: 20px 20px 0;
 		    color: $white;
 		    text-align: center;
+		    @include breakpoint (large) {
+		    	top: 220px;
+		    	height: 220px; 
+		    }
 		    &.blue{
 				background-color: rgba(0,51,98,0.9);
 		    }

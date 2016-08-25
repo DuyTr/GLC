@@ -2,66 +2,101 @@
 	max-width: 100%;
 	width: 100%;
 	margin: 0 auto;
-	border-top: 1px solid #ccc;
-
-	#footer {
-		.footer-top{
-			background-color: $dark-orange;
-			color: $white;
-			.footer-title-location, .footer-title-sitemap{
-				font-weight: $fontWeightBold;
-				font-size: 20px;
-				text-transform: uppercase;
-				margin-bottom: 20px;
+	.footer-sitemap{
+		background-color: $dark-blue;
+		color: $white;
+		img{
+			width: 200px;
+			@include breakpoint (480px down) {
+				width: 125px;
 			}
+		}
+		.txt-center{
+			@include breakpoint (large) {
+				text-align: center;
+			}
+		}
+		.sitemap-col{
+			display: inline-block;
+			text-align: left;
+			@include breakpoint (large) {
+				text-align: right;
+			}
+			p:not(.title),a{
+				display: block;
+				font-size: 12px;
+				font-weight: $fontWeightBold;
+				color: $white;
+				@include breakpoint (medium down) {
+					margin-bottom: 0;
+					&:last-child {
+						margin-bottom: $contentGapSmall;
+					}
+				}
+				@include breakpoint (small) {
+					font-size: 11px;
+				}
+			}
+			.title{
+				font-family: $headerFontFamily;
+				font-weight: $fontWeightBold;
+				margin-bottom: 10px;
+				color: $dark-orange;
+			}
+			ul{
+				list-style-type: none;
+				margin: 0;
+				a{
+					margin-bottom: 0!important;
+				}
+			}
+		}
+	}
+	
+	.footer-location{
+		@include breakpoint (medium only) {
+			padding-bottom: 15px;
+		}
+		@include breakpoint (small only) {
+			padding: $contentGapSmall 0 10px ;
 		}
 		.contact-location{
 			.location{
 				font-family: $headerFontFamily;
 				font-weight: $fontWeightBold;
-				margin-bottom: 15px;
+				margin-bottom: 10px;
+				color: $dark-orange;
 			}
 			.address, .phone{
-				font-size: 13px;
 				margin-bottom: 10px;
-				color: $light-gray;
-			}
-		}
-		.sitemap-column{
-			ul{
-				list-style-type: none;
-				margin: 0;
-			}
-			.menu{
-				text-transform: capitalize;
-				&>li{
-					font-family: $headerFontFamily;
-					font-weight: $fontWeightBold;
-					margin-bottom: 15px;
-				}
-				.submenu{
-					li{
-						font-size: 13px;
-						margin-bottom: 0;
-						font-family: $bodyFontFamily;
-						font-weight: $fontWeightNormal;
-						color: $light-gray;
-					}
-				}
-			}
-		}
-		.footer-bottom{
-			padding: 20px;
-			font-size: 12px;
-			background-color: $light-gray;
-			p{
-				display: inline-block;
-				margin-bottom: 0;
+				font-size: 12px;
 				font-weight: $fontWeightBold;
+				@include breakpoint (small only) {
+					font-size: 11px;
+				}
 			}
-			.credit{
-				float: right;
+			p:last-child{
+				margin-bottom: 0;
 			}
+			@include breakpoint (medium only) {
+				margin-bottom: $contentGap;
+			}
+			@include breakpoint (small only) {
+				margin-bottom: $contentGapSmall;
+			}
+		}
+	}
+	.footer-bottom{
+		padding: 10px 0;
+		font-size: 10px;
+		background-color: $light-gray;
+		p{
+			display: inline-block;
+			margin-bottom: 0;
+			font-weight: $fontWeightBold;
+		}
+		.credit{
+			float: right;
 		}
 	}
 }

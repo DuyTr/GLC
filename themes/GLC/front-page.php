@@ -4,13 +4,25 @@
 <div class="gradient ltr"></div>
 <div class="slider-container">
 	<div class="homepage-slider">
-		<div class="slider-content" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/slide-1.jpg')"></div>
-		<div class="slider-content" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/slide-2.jpg')"></div>
-		<div class="slider-content" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/slide-3.jpg')"></div>
-		<div class="slider-content" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/slide-4.jpg')"></div>
-		<div class="slider-content" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/slide-5.jpg')"></div>
-		<div class="slider-content" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/slide-6.jpg')"></div>
-
+		<div class="slider-content">
+			<div class="row medium-collapse slider-row">
+				<div class="small-12 medium-7 columns">
+					<div class="school image-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/ubc.jpg')">
+						
+					</div>
+				</div>
+				<div class="small-12 medium-5 columns">
+					<div class="personal-quote-container">
+						<div class="personal-quote">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/justin.jpg" class="portrait" alt="">
+							<p class="quote">Diversity is the engine of invention. It generates creativity that enriches the world</p>
+							<p class="name">Justin Trudeau</p>
+							<p class="titles">Prime Minister of Canada - UBC Alumnus</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 <div class="gradient rtl"></div>
@@ -72,33 +84,17 @@
 	<div class="row">
 		<h1 class="section-title">Featured <span>news</span></h1>
 		<div class="small-12 large-4 columns no-padding-medium-up" style="overflow:hidden">
-			<div class="image-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/testimonial.jpg')">
-				<div class="overlay">
-					<h2><a href="">Testimonials</a></h2>
-				</div>
-				<a href="">
-					<div class="info-box-container">
-						<div class="info-box blue">
-							<h2>Testimonials</h2>
-							<p>Hear what our students say about us and their experience learning at CLA!</p>
-							<div class="btn-container">
-								<span class="btn btn-blue">Learn More</span>
-							</div>
-						</div>
+			<div class="image-container-wrapper">	
+				<div class="image-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/testimonial.jpg')">
+					<div class="overlay text-center">
+						<h2><a href="">Testimonials</a></h2>
 					</div>
-				</a>
-			</div>
-		</div>
-		<div class="small-12 large-4 columns no-padding-medium-up">
-			<div class="image-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/program.jpg')">
-				<div class="overlay">	
-					<h2><a href="">Our Program</a></h2>					
 				</div>
 				<a href="">
 					<div class="info-box-container">
 						<div class="info-box orange">
-							<h2>Our Program</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+							<h2>Testimonials</h2>
+							<p>Hear what our students say about us and their experience learning at CLA!</p>
 							<div class="btn-container">
 								<span class="btn btn-orange">Learn More</span>
 							</div>
@@ -108,17 +104,39 @@
 			</div>
 		</div>
 		<div class="small-12 large-4 columns no-padding-medium-up">
-			<div class="image-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/gallery.jpg')">
-				<div class="overlay">
-					<h2><a href="">Gallery</a></h2>		
+			<div class="image-container-wrapper">
+				<div class="image-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/program.jpg')">
+					<div class="overlay text-center">	
+						<h2><a href="">Our Program</a></h2>					
+					</div>
 				</div>
 				<a href="">
 					<div class="info-box-container">
 						<div class="info-box blue">
+							<h2>Our Program</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+							<div class="btn-container">
+								<span class="btn btn-blue">Learn More</span>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="small-12 large-4 columns no-padding-medium-up">
+			<div class="image-container-wrapper">
+				<div class="image-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/gallery.jpg')">
+					<div class="overlay text-center">
+						<h2><a href="">Gallery</a></h2>		
+					</div>
+				</div>
+				<a href="">
+					<div class="info-box-container">
+						<div class="info-box orange">
 							<h2>Gallery</h2>
 							<p>Images from our workshops, as well as images of korean and chinese students</p>
 							<div class="btn-container">
-								<span class="btn btn-blue">Learn More</span>
+								<span class="btn btn">Learn More</span>
 							</div>
 						</div>
 					</div>
