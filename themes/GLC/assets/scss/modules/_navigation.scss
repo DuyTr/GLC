@@ -2,7 +2,15 @@
     padding: 10px 0 0;  
     .logo-wrapper {
         position: relative;
-
+        button{
+            position: absolute;
+            top: 20px;
+            font-size: 25px;
+            color: $light-orange;
+            @include breakpoint (large) {
+                display: none;
+            }
+        }
         .logo{
             display: inline-block;
             height: 60px;
@@ -10,29 +18,48 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-position: left center;
+            @include breakpoint (small only) {
+                width: 110px;
+            }
+            @include breakpoint (medium down) {
+                margin-left: 35px;
+            }
         }
     }
     .menu-top{
         text-align: right;
-        position: relative;
         .align-bottom{
-            position: absolute;
-            right: 0;
-            bottom: 0;
+            margin-top: 33px;
+            @include breakpoint (small only) {
+                margin-top: 15px;
+            }
         }
         p{
             display: inline-block;
             margin-bottom: 0;
             color: $dark-orange;
+            @include breakpoint (small only) {
+                display: block;
+            }
             
         }
         .lang-selection{
             padding-left: $contentGap;
             margin-left: $contentGap;
             border-left: 1px solid $black;
+            @include breakpoint (small only) {
+                padding-left: 0;
+                border: none;
+            }
             span{
                 padding: 0 5px;
             }
+        }
+    }
+    .menu-bottom-container{
+        display: none;
+        @include breakpoint (large) {
+            display: block!important;
         }
     }
     .menu-bottom{
@@ -91,6 +118,42 @@
             bottom: 0;
             left: 100%;
             width: 900px;
+        }
+    }
+}
+.off-canvas.position-left{
+    left: -252px;
+}
+.off-canvas-wrapper-inner.is-open-left{
+    border-left: 2px solid $dark-blue;
+}
+#mobile-menu{
+    height: 100%;
+    background: $light-orange;
+    padding-top: $contentGap;
+    .menu{
+        list-style-type: none;
+        margin: 0;
+        &>li{
+            height: 40px;
+            padding: 0 20px;
+            transition: all 0.5s ease;
+            &>a{
+                line-height: 40px;
+                font-size: 18px;
+                display: block;
+                color: $white;
+                vertical-align: middle;
+                transition: all 0.5s ease;
+                text-transform: uppercase;
+                font-family: $headerFontFamily;
+            }
+        }
+        &>.active, &>li:hover{
+            background-color: $light-gray;
+            &>a{
+                color: $dark-orange;
+            }
         }
     }
 }

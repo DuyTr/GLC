@@ -19,6 +19,7 @@ body{
 		line-height: 1.7
 	}
 }
+:focus {outline:none;}
 .panel{
 	padding: $sectionSpacing 0;
 	@include breakpoint (small only) {
@@ -176,24 +177,42 @@ p{
 		max-width: none!important;
 	}
 	.slider-content{
-		height: 400px;
 		.school{
-			height: 400px;
+			height: 200px;
+			@include breakpoint (medium) {
+		    	height: 350px
+		    }
+			@include breakpoint (large) {
+		    	height: 400px
+		    }
 		}
 	}
 	.personal-quote-container{
-		height: 400px;
 		position: relative;
+		height: 300px;
+		@include breakpoint (medium) {
+	    	height: 350px;
+	    }
+		@include breakpoint (large) {
+	    	height: 400px
+	    }
 	}
 	.personal-quote{
 		@include vertical-center;
-		padding: 0 $sectionSpacing;
+		padding: 0 $contentGapSmall;
+		@include breakpoint (large) {
+	    	padding: 0 $contentGap;
+	    }
 		.portrait{
 			display: block;
 		    width: 150px;
 		    border-radius: 50%;
 		    margin-left: 30px;
 		    border: 3px solid $dark-gray;
+		    @include breakpoint (medium down) {
+		    	width: 120px;
+		    	margin: 0 auto;
+		    }
 		}
 		p{
 			padding-left: 30px;
@@ -205,6 +224,9 @@ p{
 			color: $dark-gray;
 			margin: 20px 0;
 			position: relative;
+			@include breakpoint (medium down) {
+		    	font-size: 14px;
+		    }
 			&:before{
 				font-family: FontAwesome;
 				content: '\f10d';
@@ -219,50 +241,63 @@ p{
 			font-family: $headerFontFamily;
 			font-weight: $fontWeightBold;
 			text-transform: capitalize;
+			@include breakpoint (medium down) {
+		    	font-size: 14px;
+		    }
+		    @include breakpoint (small only) {
+		    	text-align: center;
+		    }
 		}
 		.titles{
-			color: $dark-blue;
+			color: $light-black;
 			font-weight: $fontWeightBold;
 			font-size: 14px;
-			@include breakpoint (small only) {
-				font-size: 12px;
-			}
+			@include breakpoint (medium down) {
+		    	font-size: 12px;
+		    }
+		    @include breakpoint (small only) {
+		    	text-align: center;
+		    }
 		}
 	}
 }
 
 .about{
-	@include breakpoint (medium-sm down) {
-		margin-bottom: 15px;
+	@include breakpoint (medium down) {
+		padding-bottom: 0;
 	}
 	h1{
 		a{
 			transition: all 0.5s ease;
 			color: $dark-blue;
 		}
-		span{
-			transition: all 0.5s ease;
-			color: $dark-orange;
-		}
 		&:hover{
 			a{
 				color: $dark-orange;
 			}
-			span{
-				color: $dark-blue;
-			}
+	
 		}
 	}
 	.value{
-		@include breakpoint (medium-sm down) {
+		@include breakpoint (medium down) {
 			margin-bottom: $contentGapSmall;
+			padding-bottom: $contentGapSmall;
+			border-bottom: 2px solid $light-gray;
 		}
+		position: relative;
 		.image-container{
-			height: 100px;
+			height: 130px;
 			border: 3px solid $dark-gray;
 			margin-bottom: $contentGap;
-			@include breakpoint (medium-sm) {
-				height: 200px;
+			@include breakpoint (small only) {
+				height: 120px;
+				margin-bottom: $contentGapSmall;
+			}
+			@include breakpoint (medium only) {
+				width: 50%;
+				display: inline-block;
+				margin-bottom: 0;
+				@include vertical-center;
 			}
 			.overlay{
 				transition: all 0.5s ease;
@@ -281,7 +316,9 @@ p{
 		.text-container	{
 			padding: 0 20px;
 			@include breakpoint (medium only) {
-				padding: 0 5px;
+				width: 50%;
+				display: inline-block;
+				float: right;
 			}
 			p{
 				margin-bottom: 10px;
@@ -330,17 +367,22 @@ p{
 				font-weight: $fontWeightBold;
 				margin-bottom: 0;
 				text-transform: uppercase;
+				@include breakpoint (medium down){
+					display: none;
+				}
 				a{
 					color: $white;
 				}
 			}
 		}
 		&:hover{
-			.overlay{
-				opacity: 0;
-			}
-			.info-box{
-				top: 0;
+			@include breakpoint (large) {
+				.overlay{
+					opacity: 0.4;
+				}
+				.info-box{
+					top: 0;
+				}
 			}
 		}
 	}
@@ -351,13 +393,13 @@ p{
 	    z-index: 3;
 	    height: 200px;
 	    @include breakpoint (large) {
-	    	height: 2200px
+	    	height: 220px
 	    }
 	    .info-box{
 	    	z-index: 3;
 		    transition: all .25s ease;
 		    position: relative;
-		    top: 200px;
+		    top: 0;
 		    height: 200px; 
 		    padding: 20px 20px 0;
 		    color: $white;
@@ -367,10 +409,16 @@ p{
 		    	height: 220px; 
 		    }
 		    &.blue{
-				background-color: rgba(0,51,98,0.9);
+				background-color: rgba(0,51,98,0.3);
+				@include breakpoint (large) {
+					background-color: rgba(0,51,98,0.8);
+				}
 		    }
 		    &.orange{
-		    	background-color: rgba(238,90,36,0.9);
+		    	background-color: rgba(238,90,36,0.3);
+		    	@include breakpoint (large) {
+					background-color: rgba(238,90,36,0.8);
+				}
 		    }
 	    }
 	    h2{

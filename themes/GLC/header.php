@@ -28,22 +28,16 @@
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 	<div class="site-layout">
 	<header id="masthead" class="site-header" role="banner">
-		<div class="title-bar" data-responsive-toggle="site-navigation">
-			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
-			<div class="title-bar-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</div>
-		</div>
-
-		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-			<div class="row" data-equalizer>
-				<div class="small-10 mediun-8 large-6 columns">
-					<div class="logo-wrapper" data-equalizer-watch>
+		<nav id="site-navigation">
+			<div class="row">
+				<div class="small-6 medium-4 columns">
+					<div class="logo-wrapper">
+						<button data-toggle="mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
 						<div class="logo" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/glc-logo.png')"></div>
 					</div>
 				</div>
-				<div class="small-2 medium-4 large-6 columns">
-					<div class="menu-top" data-equalizer-watch>
+				<div class="small-6 medium-8 columns">
+					<div class="menu-top">
 						<div class="align-bottom">
 							<p>Welcome Guest!</p>
 							<p class="lang-selection">
@@ -54,18 +48,8 @@
 						</div>
 					</div>
 				</div> 
-				<div class="small-12 columns">
+				<div class="small-12 columns menu-bottom-container">
 					<div class="menu-bottom">
-						<!-- <ul class="menu">
-							<li class="active" ><a href="">Home</a></li>
-							<li><a href="">about us</a></li>
-							<li><a href="">program</a></li>
-							<li><a href="">admission</a></li>
-							<li><a href="">Gallery</a></li>
-							<li><a href="">Community</a></li>
-							<li><a href="">My Page</a></li>
-							<li><a href="">Contact us</a></li>
-						</ul> -->
 						<?php wp_nav_menu('primary'); ?>
 					</div>
 				</div>

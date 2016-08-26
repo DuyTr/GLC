@@ -15,9 +15,104 @@
 					<div class="personal-quote-container">
 						<div class="personal-quote">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/justin.jpg" class="portrait" alt="">
-							<p class="quote">Diversity is the engine of invention. It generates creativity that enriches the world</p>
+							<p class="quote">Diversity is the engine of invention. It generates creativity that enriches the world.</p>
 							<p class="name">Justin Trudeau</p>
 							<p class="titles">Prime Minister of Canada - UBC Alumnus</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-content">
+			<div class="row medium-collapse slider-row">
+				<div class="small-12 medium-7 columns">
+					<div class="school image-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/harvard.jpg')">
+						
+					</div>
+				</div>
+				<div class="small-12 medium-5 columns">
+					<div class="personal-quote-container">
+						<div class="personal-quote">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/mark.jpg" class="portrait" alt="">
+							<p class="quote">Some people dream of success…while others wake up and work hard at it.</p>
+							<p class="name">Mark Zuckerberg</p>
+							<p class="titles">CEO of Facebook - Harvard Alumnus</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-content">
+			<div class="row medium-collapse slider-row">
+				<div class="small-12 medium-7 columns">
+					<div class="school image-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/stanford.jpg')">
+						
+					</div>
+				</div>
+				<div class="small-12 medium-5 columns">
+					<div class="personal-quote-container">
+						<div class="personal-quote">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/larry.jpg" class="portrait" alt="">
+							<p class="quote">Always work hard on something uncomfortably exciting</p>
+							<p class="name">Larry Page</p>
+							<p class="titles">Co-Founder of Google - Stanford Alumnus</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-content">
+			<div class="row medium-collapse slider-row">
+				<div class="small-12 medium-7 columns">
+					<div class="school image-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/yale.jpg')">
+						
+					</div>
+				</div>
+				<div class="small-12 medium-5 columns">
+					<div class="personal-quote-container">
+						<div class="personal-quote">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/indra.jpg" class="portrait" alt="">
+							<p class="quote">Leadership is hard to define and good leadership even harder. But if you can get people to follow you to the ends of the earth, you are a great leader.</p>
+							<p class="name">Indra Nooyi</p>
+							<p class="titles">CEO of Pepsico - UBC Alumna</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-content">
+			<div class="row medium-collapse slider-row">
+				<div class="small-12 medium-7 columns">
+					<div class="school image-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/oxford.jpg')">
+						
+					</div>
+				</div>
+				<div class="small-12 medium-5 columns">
+					<div class="personal-quote-container">
+						<div class="personal-quote">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/stephen.jpg" class="portrait" alt="">
+							<p class="quote">Intelligence is the ability to adapt to change.</p>
+							<p class="name">Stephen Hawking</p>
+							<p class="titles">Theoretical Physicist - Oxford Alumnus</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-content">
+			<div class="row medium-collapse slider-row">
+				<div class="small-12 medium-7 columns">
+					<div class="school image-container" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/columbia.jpg')">
+						
+					</div>
+				</div>
+				<div class="small-12 medium-5 columns">
+					<div class="personal-quote-container">
+						<div class="personal-quote">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/buffett.jpg" class="portrait" alt="">
+							<p class="quote">Price is what you pay, Value is what you get.</p>
+							<p class="name">Warren Buffett</p>
+							<p class="titles">CEO of Berkshire Hathaway - Columbia Alumnus</p>
 						</div>
 					</div>
 				</div>
@@ -36,21 +131,21 @@
 	</div>
 	<div class="row">
 		
-		<div class="smal-12 medium-4 columns">
-			<div class="value">
-				<div class="image-container"  style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/vision.jpg')">
-					<div class="overlay"></div>
-					<h2>Our Vision</h2>
+		<div class="smal-12 large-4 columns">
+			<div class="value clearfix">
+					<div class="image-container"  style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/vision.jpg')">
+						<div class="overlay"></div>
+						<h2>Our Vision</h2>
+					</div>
+					<div class="text-container">
+						<p>Success - GLC leads students to unlock their potential for personal and professional success.
+						<p>Happiness - Based on psychological research, having meaningful goals and pursuing them plays an important role in our psychological well-being.</p>
+						<p>Freedom - By being in control of our life, we can finally become a true owner of our life.</p>
+					</div>
 				</div>
-				<div class="text-container">
-					<p>Success - GLC leads students to unlock their potential for personal and professional success.
-					<p>Happiness - Based on psychological research, having meaningful goals and pursuing them plays an important role in our psychological well-being.</p>
-					<p>Freedom - By being in control of our life, we can finally become a true owner of our life.</p>
-				</div>
-			</div>
 		</div>
-		<div class="smal-12 medium-4 columns">
-			<div class="value">
+		<div class="smal-12 large-4 columns">
+			<div class="value clearfix">
 				<div class="image-container"  style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/mission.jpg')">
 					<div class="overlay"></div>
 					<h2>Our Mission</h2>
@@ -61,8 +156,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="smal-12 medium-4 columns">
-			<div class="value">
+		<div class="smal-12 large-4 columns">
+			<div class="value clearfix">
 				<div class="image-container"  style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/placeholder_images/purpose.jpg')">
 					<div class="overlay"></div>
 					<h2>Our Purpose</h2>

@@ -12,4 +12,3 @@
   <?php foundationpress_mobile_nav(); ?>
 </nav>
 
-<div class="off-canvas-content" data-off-canvas-content>
