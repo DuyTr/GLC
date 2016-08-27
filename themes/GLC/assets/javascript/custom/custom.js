@@ -1,7 +1,8 @@
 // Homepage slider
 $(document).ready(function(){
   	$('.homepage-slider').slick({
-    	autoplay: false
+    	autoplay: true,
+    	dots: true
   	});
 });
 

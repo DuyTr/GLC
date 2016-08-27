@@ -11,15 +11,15 @@ $slick-font-path: "../../fonts/" !default;
 $slick-font-family: "./slick" !default;
 $slick-loader-path: "../components/slick-carousel/slick/" !default;
 $slick-arrow-color: white !default;
-$slick-dot-color: black !default;
-$slick-dot-color-active: $slick-dot-color !default;
+$slick-dot-color: $white;
+$slick-dot-color-active: $dark-orange;
 $slick-prev-character: "\2190" !default;
 $slick-next-character: "\2192" !default;
 $slick-dot-character: "\2022" !default;
 $slick-dot-size: 6px !default;
-$slick-opacity-default: 0.75 !default;
+$slick-opacity-default: 0.8 !default;
 $slick-opacity-on-hover: 1 !default;
-$slick-opacity-not-active: 0.25 !default;
+$slick-opacity-not-active: 0.7 !default;
 
 @function slick-image-url($url) {
     @if function-exists(image-url) {
@@ -91,7 +91,7 @@ $slick-opacity-not-active: 0.25 !default;
     }
     &:before {
         font-family: $slick-font-family;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1;
         color: $slick-arrow-color;
         opacity: $slick-opacity-default;
@@ -173,22 +173,23 @@ $slick-opacity-not-active: 0.25 !default;
                 position: absolute;
                 top: 0;
                 left: 0;
-                content: $slick-dot-character;
-                width: 20px;
-                height: 20px;
-                font-family: $slick-font-family;
-                font-size: $slick-dot-size;
-                line-height: 20px;
+                content: "\f111";
+                font-family: FontAwesome;
+                font-size: 18px;
+                line-height: 18px;
                 text-align: center;
                 color: $slick-dot-color;
                 opacity: $slick-opacity-not-active;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
+                @include breakpoint (small only) {
+                    font-size: 12px;
+                }
             }
         }
         &.slick-active button:before {
             color: $slick-dot-color-active;
-            opacity: $slick-opacity-default;
+            opacity: 1.0;
         }
     }
 }

@@ -173,6 +173,9 @@ p{
 /* *Home Page */
 // Slider
 .homepage-slider{
+	@include breakpoint (medium) {
+		margin-bottom: 0!important;
+	}
 	.slider-row{
 		max-width: none!important;
 	}
@@ -258,6 +261,20 @@ p{
 		    @include breakpoint (small only) {
 		    	text-align: center;
 		    }
+		}
+	}
+	.slick-dots{
+		display: inline-block!important;
+		width: auto!important;
+		left: $contentGap;
+		bottom: $contentGap;
+		@include breakpoint (small only) {
+			bottom: auto;
+			left: $contentGapSmall;
+			top: $contentGapSmall;
+			li{
+				display: block;
+			}
 		}
 	}
 }
