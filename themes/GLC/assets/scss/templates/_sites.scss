@@ -3,6 +3,8 @@
 /* *General
 /* *Home Page
 /* *FAQ
+/* *Contact
+/* *About
 
 */
 
@@ -34,7 +36,10 @@ h1{
 	margin-bottom: 30px;
 }
 p{
-	margin-bottom: $contentGap;
+	margin-bottom: $contentGapSmall;
+	@include breakpoint (medium) {
+		margin-bottom: $contentGap;
+	}
 }
 a{
 	color: $light-blue;
@@ -69,7 +74,7 @@ a{
 	font-weight: $fontWeightBold;
 	transition: all 0.5s ease;
 	color: $dark-orange;
-	border: 1px solid $dark-orange;
+	border: 1px solid $light-black;
 	@include breakpoint (small only) {
 		font-size: 16px;
 	}
@@ -167,12 +172,10 @@ a{
 }
 .headline{
 	font-size: 20px;
+	font-style: italic;
 	line-height: 1.0;
 	@include breakpoint (small only) {
 		font-size: 18px;
-	}
-	@include breakpoint (small only) {
-		font-size: 20px;
 	}
 	span{
 		color: $dark-orange;
@@ -182,6 +185,17 @@ a{
 	h1{
 		color: $dark-blue;
 		line-height: 1.0;
+		position: relative;
+		&:after{
+			content: '';
+		    position: absolute;
+		    width: 150px;
+		    height: 2px;
+		    background: $light-orange;
+		    bottom: -10px;
+		    left: 0;
+		    margin: auto;
+		}
 	}
 	.intro-content{
 		p{
@@ -416,6 +430,10 @@ a{
 				.overlay{
 					opacity: 0.4;
 				}
+				.info-box-container{
+					border-left: 1px solid $dark-blue;
+					border-right: 1px solid $dark-blue;
+				}
 				.info-box{
 					top: 0;
 				}
@@ -429,7 +447,7 @@ a{
 	    z-index: 3;
 	    height: 200px;
 	    @include breakpoint (large) {
-	    	height: 220px
+	    	height: 220px;
 	    }
 	    .info-box{
 	    	z-index: 3;
@@ -438,23 +456,14 @@ a{
 		    top: 0;
 		    height: 200px; 
 		    padding: 20px 20px 0;
+		    background-color: transparent;
 		    color: $white;
 		    text-align: center;
 		    @include breakpoint (large) {
 		    	top: 220px;
 		    	height: 220px; 
-		    }
-		    &.blue{
-				background-color: rgba(0,51,98,0.3);
-				@include breakpoint (large) {
-					background-color: rgba(0,51,98,0.8);
-				}
-		    }
-		    &.orange{
-		    	background-color: rgba(238,90,36,0.3);
-		    	@include breakpoint (large) {
-					background-color: rgba(238,90,36,0.8);
-				}
+		    	background-color: #E5E5E5;
+		    	color: $light-black;
 		    }
 	    }
 	    h2{
@@ -617,5 +626,154 @@ a{
 		border-top: 1px solid $light-orange;
 		padding: 10px 0 0;
 		color: $light-black;
+	}
+}
+/* *Contact */
+.page-template-contact{
+	.wpcf7-form{
+		position: relative;
+		max-width: 350px;
+		label{
+			display: block;
+			margin-bottom: 5px;
+			font-weight: $fontWeightBold;
+			span{
+				color: $dark-orange;
+			}
+		}
+		.wpcf7-form-control-wrap{
+			display: block;
+		}
+		input, textarea{
+			border: none;
+			background-color: $medium-gray;
+			padding: 10px;
+			font-size: 15px;
+			width: 100%;
+			&.wpcf7-not-valid{
+				background-color: $light-orange;
+			}
+		}
+		input{
+			height: 30px;
+			@include breakpoint (medium) {
+				height: 40px;
+			}
+		}
+		input[type=submit]{
+			display: inline-block;
+			padding: 0 20px;
+			background-color: $white;
+			width: auto;
+			font-size: 18px;
+			text-transform: uppercase;
+			font-weight: $fontWeightBold;
+			transition: all 0.5s ease;
+			color: $dark-orange;
+			border: 1px solid $dark-orange;
+			@include breakpoint (small only) {
+				font-size: 16px;
+			}
+			&:hover{
+				color: $white;
+				background-color: $dark-orange;
+				border-color: $dark-orange;
+			}
+		}
+		textarea{
+			height: 120px;
+		}
+		span.wpcf7-not-valid-tip{
+			display: none!important;
+		}
+		.wpcf7-response-output{
+			display: none!important;
+		}
+		.note{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			font-size: 12px;
+			margin-bottom: 0;
+			span{
+				color: $dark-orange;
+			}
+		}
+	}
+	.social-media{
+		margin-bottom: 0;
+		i{
+			margin: 10px;
+			color: $dark-orange;
+			font-size: 20px;
+		}
+	}
+	.contact-section{
+		padding-bottom: $sectionSpacing;
+		@include breakpoint (small only) {
+			padding-bottom: $sectionSpacingSmall;
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* *About */
+.page-template-about{
+	.principal-section{
+		padding-bottom: $sectionSpacing;
+		@include breakpoint (small only) {
+			padding-bottom: $sectionSpacingSmall;
+		}
+	}
+	h2{
+		margin-bottom: $contentGapSmall;
+	    @include breakpoint (medium) {
+	    	margin-bottom: $contentGap;
+	    }
+	}
+	.principal{
+		@include breakpoint (small only) {
+			margin: 10px;
+		}
+		img{
+			width: 200px;
+			border-radius: 50%;
+		    border: 5px solid $dark-gray;
+		    margin-bottom: $contentGapSmall;
+		    @include breakpoint (medium) {
+		    	margin-bottom: $contentGap;
+		    }
+		}
+		.name{
+			padding-left: 20px;
+			margin-bottom: 0;
+			color: $dark-orange;
+			font-family: $headerFontFamily;
+			font-weight: $fontWeightBold;
+		}
+		.title{
+			padding-left: 20px;
+			font-weight: $fontWeightBold;
+			font-size: 12px;
+			@include breakpoint (medium) {
+		    	font-size: 14px;
+		    }
+		}
+		.message{
+			padding-left: 20px;
+			margin-bottom: 0;
+			position: relative;
+			&:before{
+				font-family: FontAwesome;
+				content: '\f10d';
+				color: $dark-orange;
+				font-size: 12px;
+				position: absolute;
+				left: 0; top: 0;
+			}	
+		}
+
 	}
 }

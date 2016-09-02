@@ -187,11 +187,11 @@
 				</div>
 				<a href="">
 					<div class="info-box-container">
-						<div class="info-box orange">
+						<div class="info-box">
 							<h2>Testimonials</h2>
 							<p>Hear what our students say about us and their experience learning at CLA!</p>
 							<div class="btn-container">
-								<span class="btn btn-orange">Learn More</span>
+								<span class="btn">Learn More</span>
 							</div>
 						</div>
 					</div>
@@ -207,11 +207,11 @@
 				</div>
 				<a href="">
 					<div class="info-box-container">
-						<div class="info-box blue">
+						<div class="info-box">
 							<h2>Our Program</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
 							<div class="btn-container">
-								<span class="btn btn-blue">Learn More</span>
+								<span class="btn">Learn More</span>
 							</div>
 						</div>
 					</div>
@@ -227,7 +227,7 @@
 				</div>
 				<a href="">
 					<div class="info-box-container">
-						<div class="info-box orange">
+						<div class="info-box">
 							<h2>Gallery</h2>
 							<p>Images from our workshops, as well as images of korean and chinese students</p>
 							<div class="btn-container">
