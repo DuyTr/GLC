@@ -126,7 +126,7 @@
 	<div class="row">
 		<div class="small-12 columns text-center">
 			<h1 class="section-title"><a href="">About <span>GLC</span></a></h1>
-			<p class="headline">Empowering future leaders to reach their goals</p>
+			<p class="headline"><span>Empowering</span> future leaders to reach their <span>goals</span></p>
 		</div>
 	</div>
 	<div class="row">

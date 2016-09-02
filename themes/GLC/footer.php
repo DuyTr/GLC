@@ -95,9 +95,11 @@
 								</div>
 								<div class="small12 medium-6 columns txt-center">
 									<div class="sitemap-col">
-										<p class="title">Related Links</p>
-										<a href="">GLC Website</a>
-										<a href="">Canada College Website</a>
+										<p class="title">SSAP</p>
+										<p>Qualified Schools</p>
+										<p>Proven Homestay</p>
+										<p>Systematic Management System</p>
+										<p>Education Programs</p>
 									</div>
 								</div>
 							</div>
@@ -109,7 +111,7 @@
 							</div>
 						</div>
 						<div class="small-6 medium-pull-6 large-pull-0 large-3 columns txt-center">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/glc-logo.png" alt="">
+							<h1>Global Canlink Learning Centre</h1>
 						</div>
 					</div>
 				</div>

@@ -5,11 +5,8 @@
 	.footer-sitemap{
 		background-color: $dark-blue;
 		color: $white;
-		img{
-			width: 200px;
-			@include breakpoint (480px down) {
-				width: 125px;
-			}
+		h1{
+			max-width: 260px;
 		}
 		.txt-center{
 			@include breakpoint (large) {
@@ -26,12 +23,10 @@
 				display: block;
 				font-size: 12px;
 				font-weight: $fontWeightBold;
-				color: $white;
-				@include breakpoint (medium down) {
-					margin-bottom: 0;
-					&:last-child {
-						margin-bottom: $contentGapSmall;
-					}
+				color: $dark-orange;
+				margin-bottom: 0;
+				&:last-child {
+					margin-bottom: $contentGapSmall;
 				}
 				@include breakpoint (small) {
 					font-size: 11px;
@@ -41,7 +36,7 @@
 				font-family: $headerFontFamily;
 				font-weight: $fontWeightBold;
 				margin-bottom: 10px;
-				color: $dark-orange;
+				color: $white;
 			}
 			ul{
 				list-style-type: none;

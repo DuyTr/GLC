@@ -42,7 +42,7 @@
 							<p>Welcome Guest!</p>
 							<p class="lang-selection">
 								<i class="fa fa-globe" aria-hidden="true"></i>
-								<span>Laguage</span>
+								<span>Language</span>
 								<i class="fa fa-angle-down" aria-hidden="true"></i>
 							</p>
 						</div>
