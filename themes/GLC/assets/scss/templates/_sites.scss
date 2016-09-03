@@ -6,6 +6,7 @@
 /* *Contact
 /* *About
 /* *Default Page
+/* *Gallery
 
 */
 
@@ -230,7 +231,7 @@ a{
 		padding: $contentGap;
 	}
 	@include breakpoint (small only) {
-		margin-bottom: $sectionSpacingSmall;
+		margin-top: $sectionSpacingSmall;
 	}
 	i{
 		color: #ffcb05;
@@ -637,7 +638,7 @@ a{
 }
 /* *FAQ */
 .page-template-faq{
-	.questions-section{
+	.faq-page-content{
 		margin-bottom: $sectionSpacingSmall;
 		@include breakpoint (medium) {
 			margin-bottom: $sectionSpacing;
@@ -768,12 +769,14 @@ a{
 		}
 	}
 	.contact-section{
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+	.contact-page-content{
 		padding-bottom: $sectionSpacing;
 		@include breakpoint (small only) {
 			padding-bottom: $sectionSpacingSmall;
-		}
-		p:last-child{
-			margin-bottom: 0;
 		}
 	}
 }
@@ -839,12 +842,60 @@ a{
 /* *Default Page */
 .page-template-default, .page-template-ssap {
 	.content-section{
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+	#page{
 		padding-bottom: $sectionSpacing;
 		@include breakpoint (small only) {
 			padding-bottom: $sectionSpacingSmall;
 		}
-		p:last-child{
-			margin-bottom: 0;
+	}
+}
+
+/* *Single Gallery */
+.single-gallery {
+	.gallery-content{
+		padding-bottom: $sectionSpacing;
+		@include breakpoint (small only) {
+			padding-bottom: $sectionSpacingSmall;
+		}
+		.gallery-image{
+			display: block;
+			margin-bottom: 20px;
+			@include breakpoint (medium) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
+/* *Gallery Archive */
+.page-template-gallery{
+	.gallery{
+		display: block;
+		background-color: $light-gray;
+		margin-bottom: $sectionSpacingSmall;
+		@include breakpoint (medium) {
+			margin-bottom: $sectionSpacing;
+		}
+		.gallery-info{
+			padding: $contentGapSmall;
+			h3{
+				font-weight: $fontWeightBold;
+				margin-bottom: 10px;
+				color: $light-black;
+			}
+			p{
+				color: $light-black;
+			}
+			.btn{
+				@include breakpoint (medium down) {
+					padding: 5px 10px;
+					font-size: 15px;
+				}
+			}
 		}
 	}
 }

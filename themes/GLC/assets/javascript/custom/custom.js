@@ -21,3 +21,13 @@ $(document).ready(function(){
 	$('#loadOverlay').addClass('remove-overlay');
 	setTimeout(function(){ $('#loadOverlay').remove();},800);
 });
+
+// Photo grid
+$(document).ready(function(){
+	$('.grid').masonry({
+		percentPosition: true,
+		columnWidth: '.grid-sizer',
+		gutter: '.gutter-sizer',
+		itemSelector: 'grid-item'
+	});
+});

@@ -180,7 +180,22 @@ gulp.task('copy', function() {
   var fontAwesome = gulp.src('assets/components/fontawesome/fonts/**/*.*')
       .pipe(gulp.dest('assets/fonts'));
 
-  return merge(motionUi, whatInput, fontAwesome);
+  // JQuery
+  var jQuery = gulp.src('assets/components/jquery/**/*.*')
+      .pipe($.flatten())
+      .pipe(gulp.dest('assets/javascript/vendor/jquery'));
+
+  // Slick
+  var slick = gulp.src('assets/components/slick-carousel/**/*.*')
+      .pipe($.flatten())
+      .pipe(gulp.dest('assets/javascript/vendor/slick-carousel'));
+
+  // Masonry
+  var masonry = gulp.src('assets/components/masonry/**/*.*')
+      .pipe($.flatten())
+      .pipe(gulp.dest('assets/javascript/vendor/masonry'));
+
+  return merge(motionUi, whatInput, fontAwesome, jQuery, slick, masonry);
 });
 
 // Package task
