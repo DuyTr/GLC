@@ -18,6 +18,8 @@
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
+	
+	<div id="loadOverlay" style="background-color:#fff;height:100vh;width:100%;position:fixed;top:0;z-index:999999;opacity:1;transition: 0.5s ease;"></div>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
 	<div class="off-canvas-wrapper">

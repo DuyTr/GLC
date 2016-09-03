@@ -26,6 +26,6 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<div class="medium-4 columns"></div>
+	<?php get_template_part( 'template-parts/notification-section'); ?>
 </div>
 <?php get_footer(); ?>

@@ -5,13 +5,13 @@
 /* *FAQ
 /* *Contact
 /* *About
+/* *Default Page
 
 */
 
 
 /* *General */
 body{
-	background: url('../placeholder_images/bg-pattern.png');
 	-webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
     overflow: auto;
@@ -21,6 +21,9 @@ body{
 		line-height: 1.7
 	}
 }
+.off-canvas-wrapper{
+}
+.remove-overlay{opacity:0!important}
 :focus {outline:none;}
 .panel{
 	padding: $sectionSpacing 0;
@@ -101,6 +104,18 @@ a{
 		color: $light-orange;
 		background-color: $white;
 	}
+}
+.alignleft{
+	padding:  10px 10px 10px 0;
+}
+.alignright{
+	padding:  10px 0 10px 10px;
+}
+.aligncenter{
+	margin: 10px auto;
+}
+.alignnone{
+	margin: 10px 0;
 }
 .section-title{
 	text-align: center;
@@ -189,7 +204,7 @@ a{
 		&:after{
 			content: '';
 		    position: absolute;
-		    width: 150px;
+		    width: 200px;
 		    height: 2px;
 		    background: $light-orange;
 		    bottom: -10px;
@@ -200,6 +215,48 @@ a{
 	.intro-content{
 		p{
 			margin-bottom: 0;
+			color: $dark-gray;
+			font-weight: $fontWeightBold;
+		}
+	}
+}
+.notification-section{
+	position: relative;
+	border-radius: 20px;
+	background-color: $dark-orange;
+	color: $white;
+	padding: $contentGapSmall;
+	@include breakpoint (medium) {
+		padding: $contentGap;
+	}
+	@include breakpoint (small only) {
+		margin-bottom: $sectionSpacingSmall;
+	}
+	i{
+		color: #ffcb05;
+		font-size: 24px;
+		margin-bottom: 10px;
+		@include breakpoint (medium) {
+			font-size: 30px;
+		}
+		@include breakpoint (small only) {
+			position: absolute;
+			top: $contentGapSmall;
+			left: $contentGapSmall;
+		}
+	}
+	.title{
+		font-weight: $fontWeightBold;
+		font-size: 17px;
+		margin-bottom: 5px!important;
+		@include breakpoint (medium) {
+			font-size: 19px;
+		}
+	}
+	p{
+		margin-bottom: 0;
+		@include breakpoint (small only) {
+			padding-left: 50px;
 		}
 	}
 }
@@ -633,6 +690,9 @@ a{
 	.wpcf7-form{
 		position: relative;
 		max-width: 350px;
+		@include breakpoint (small only) {
+			max-width: none;
+		}
 		label{
 			display: block;
 			margin-bottom: 5px;
@@ -704,7 +764,6 @@ a{
 		margin-bottom: 0;
 		i{
 			margin: 10px;
-			color: $dark-orange;
 			font-size: 20px;
 		}
 	}
@@ -775,5 +834,17 @@ a{
 			}	
 		}
 
+	}
+}
+/* *Default Page */
+.page-template-default, .page-template-ssap {
+	.content-section{
+		padding-bottom: $sectionSpacing;
+		@include breakpoint (small only) {
+			padding-bottom: $sectionSpacingSmall;
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
 	}
 }

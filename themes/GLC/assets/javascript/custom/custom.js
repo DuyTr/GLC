@@ -15,3 +15,9 @@ function equalHeightWidth(){
 	
 $( document ).ready(equalHeightWidth);
 $( window ).resize(equalHeightWidth);
+
+// Remove overlay
+$(document).ready(function(){
+	$('#loadOverlay').addClass('remove-overlay');
+	setTimeout(function(){ $('#loadOverlay').remove();},800);
+});
