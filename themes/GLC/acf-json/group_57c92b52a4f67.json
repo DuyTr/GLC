@@ -1,0 +1,41 @@
+{
+    "key": "group_57c92b52a4f67",
+    "title": "Contact Page",
+    "fields": [
+        {
+            "key": "field_57c92b6672fac",
+            "label": "Contact Form",
+            "name": "contact_form",
+            "type": "cf7",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "allow_null": 0,
+            "multiple": 0,
+            "disable": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/contact.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1472896547
+}
