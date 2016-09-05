@@ -158,6 +158,15 @@
 }
 .off-canvas.position-left{
     left: -252px;
+    .close-button{
+        position: absolute;
+        font-size: 25px;
+        top: 30px;
+        right: 20px;
+        i{
+            color: #4d4d4d;
+        }
+    }
 }
 .off-canvas-wrapper-inner.is-open-left{
     border-left: 2px solid $dark-blue;
