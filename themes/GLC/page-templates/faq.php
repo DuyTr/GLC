@@ -12,18 +12,17 @@ get_header(); ?>
 		<div class="small-12 medium-8 columns">
 			<div class="questions-section">
 				<div class="accordion" data-accordion data-allow-all-closed="true">
-				  	<div class="question accordion-item" data-accordion-item>
-				    	<a href="#" class="accordion-title">What does CLA stands for?</a>
-				    	<div class="accordion-content" data-tab-content>
-				      		CLA stands for Global Canlink Learning Centre.
-				    	</div>
-				  	</div>
-				  	<div class="question accordion-item" data-accordion-item>
-				    	<a href="#" class="accordion-title">What does CLA stands for?</a>
-				    	<div class="accordion-content" data-tab-content>
-				      		CLA stands for Global Canlink Learning Centre.
-				    	</div>
-				  	</div>
+					<?php if( have_rows('qa_question') ):
+ 						while ( have_rows('qa_question') ) : the_row(); ?>
+
+						  	<div class="question accordion-item" data-accordion-item>
+						    	<a href="#" class="accordion-title"><?php the_sub_field('question'); ?></a>
+						    	<div class="accordion-content" data-tab-content>
+						      		<?php the_sub_field('answer'); ?>
+						    	</div>
+						  	</div>
+						<?php endwhile; 
+					endif;?>
 				</div>
 			</div>
 		</div>

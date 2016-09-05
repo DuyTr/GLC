@@ -12,8 +12,8 @@ get_header(); ?>
 		<div class="small-12 medium-8 columns">
 			<div class="contact-section">
 				<?php the_field('contact_form'); ?>
-				<p class="social-media">Follow us on: <a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a></p>
-				<p>Email Us: <a href="mailto:info@glcedu.ca">info@glcedu.ca</a></p>
+				<p class="social-media">Follow us on: <a href="<?php the_field('facebook_link'); ?>"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></p>
+				<p>Email Us: <a href="mailto:<?php the_field('email_link'); ?>"><?php the_field('email_link'); ?></a></p>
 			</div>
 		</div>
 		<?php get_template_part( 'template-parts/notification-section'); ?>

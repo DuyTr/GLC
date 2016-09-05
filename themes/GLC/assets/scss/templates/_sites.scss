@@ -7,6 +7,7 @@
 /* *About
 /* *Default Page
 /* *Gallery
+/* *Testimonial
 
 */
 
@@ -394,11 +395,11 @@ a{
 		}
 		position: relative;
 		.image-container{
-			height: 130px;
+			height: 200px;
 			border: 3px solid $dark-gray;
 			margin-bottom: $contentGap;
 			@include breakpoint (small only) {
-				height: 120px;
+				height: 170px;
 				margin-bottom: $contentGapSmall;
 			}
 			@include breakpoint (medium only) {
@@ -409,12 +410,12 @@ a{
 			}
 			.overlay{
 				transition: all 0.5s ease;
-				background-color: rgba(0,0,0,0.4);
+				background-color: rgba(255,255,255,0.4);
 			}
 			h2{
 				@include absolute-center;
 				transition: all 0.5s ease;
-				color: $white;
+				color: $light-black;
 				font-weight: $fontWeightBold;
 				margin-bottom: 0;
 				text-transform: uppercase;
@@ -429,7 +430,12 @@ a{
 				float: right;
 			}
 			p{
+				line-height: 1.5;
 				margin-bottom: 10px;
+				font-size: 15px;
+				@include breakpoint (small only) {
+					font-size: 13px;
+				}
 				&:last-child{
 					margin-bottom: 0;
 				}
@@ -466,15 +472,19 @@ a{
 		    }
 		}
 		.overlay{
-			background-color: rgba(0,0,0,0.5);
+			background-color: rgba(0,0,0,0.4);
 			position: relative;
 			transition: all .25s ease;
+			@include breakpoint (large) {
+				background-color: rgba(0,0,0,0.1);
+			}
 			h2{
 				@include absolute-center;
 				transition: all 0.5s ease;
 				font-weight: $fontWeightBold;
 				margin-bottom: 0;
 				text-transform: uppercase;
+				color: $white;
 				@include breakpoint (medium down){
 					display: none;
 				}
@@ -529,6 +539,12 @@ a{
 			text-transform: uppercase;
 			margin-bottom: 30px;
 			position: relative;
+			a{
+				color: $white;
+				@include breakpoint (large) {
+					color: $light-black;
+				}
+			}
 			&:after{
 				content:'';
 			    position:absolute;
@@ -880,6 +896,12 @@ a{
 		@include breakpoint (medium) {
 			margin-bottom: $sectionSpacing;
 		}
+		.image-container{
+			display: block;
+			@include breakpoint (small only) {
+				height: 200px!important;
+			}
+		}
 		.gallery-info{
 			padding: $contentGapSmall;
 			h3{
@@ -896,6 +918,33 @@ a{
 					font-size: 15px;
 				}
 			}
+		}
+	}
+}
+
+/* *Testimonial */
+.testimonial-page-content{
+	padding-bottom: $sectionSpacing;
+	@include breakpoint (small only) {
+		padding-bottom: $sectionSpacingSmall;
+	}
+	.testimonial{
+		margin-bottom: $contentGapSmall;
+		@include breakpoint (medium) {
+			margin-bottom: $contentGap;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+		.date{
+			color: $dark-blue;
+			margin-bottom: 0;
+			font-family: $headerFontFamily;
+			font-weight: $fontWeightBold;
+		}
+		p:not(.date){
+			color: $dark-gray;
+			font-weight: $fontWeightBold;
 		}
 	}
 }

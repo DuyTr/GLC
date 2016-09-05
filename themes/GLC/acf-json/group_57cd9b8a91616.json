@@ -1,0 +1,120 @@
+{
+    "key": "group_57cd9b8a91616",
+    "title": "Testimonials Fields",
+    "fields": [
+        {
+            "key": "field_57cd9b9abc66a",
+            "label": "Testimonial",
+            "name": "testimonial",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Testimonial",
+            "sub_fields": [
+                {
+                    "key": "field_57cd9baebc66b",
+                    "label": "Date",
+                    "name": "date",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_57cd9bd9bc66c",
+                    "label": "Testimonial Text",
+                    "name": "testimonial_text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_57cd9bebbc66d",
+                    "label": "Videos",
+                    "name": "videos",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": "",
+                    "max": "",
+                    "layout": "block",
+                    "button_label": "Add Video",
+                    "sub_fields": [
+                        {
+                            "key": "field_57cd9c09bc66e",
+                            "label": "video",
+                            "name": "video",
+                            "type": "oembed",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "width": "",
+                            "height": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/testimonials.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1473092990
+}

@@ -1,0 +1,83 @@
+{
+    "key": "group_57cd8ea034dfd",
+    "title": "Community Fields",
+    "fields": [
+        {
+            "key": "field_57cd8eb07b52d",
+            "label": "Q&A Question",
+            "name": "qa_question",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Question",
+            "sub_fields": [
+                {
+                    "key": "field_57cd8eec7b52e",
+                    "label": "Question",
+                    "name": "question",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_57cd8f007b52f",
+                    "label": "Answer",
+                    "name": "answer",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/faq.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1473089330
+}

@@ -35,7 +35,7 @@
 				<div class="small-6 medium-4 columns">
 					<div class="logo-wrapper">
 						<button data-toggle="mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
-						<div class="logo" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/glc-logo.png')"></div>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><div class="logo" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/glc-logo.png')"></div></a>
 					</div>
 				</div>
 				<div class="small-6 medium-8 columns">
